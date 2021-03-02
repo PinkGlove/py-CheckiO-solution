@@ -3,7 +3,6 @@ def max_digit(number: int) -> int:
     maximum = 0
     while number != 0:
         current = number % 10
-        print(str(number) + " " + str(current))
         if current > maximum:
             maximum = current
         number = number // 10
@@ -13,7 +12,6 @@ def max_digit(number: int) -> int:
 if __name__ == '__main__':
     print("Example:")
     print(max_digit(0))
-    print(max_digit(52))
 
     # These "asserts" are used for self-checking and not for an auto-testing
     assert max_digit(0) == 0
