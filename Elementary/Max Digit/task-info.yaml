@@ -1,0 +1,57 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: |
+    def max_digit(number: int) -> int:
+        # your code here
+        maximum = 0
+        while number != 0:
+            current = number % 10
+            print(str(number) + " " + str(current))
+            if current > maximum:
+                maximum = current
+            number = number // 10
+        return maximum
+
+
+    if __name__ == '__main__':
+        print("Example:")
+        print(max_digit(0))
+        print(max_digit(52))
+
+        # These "asserts" are used for self-checking and not for an auto-testing
+        assert max_digit(0) == 0
+        assert max_digit(52) == 5
+        assert max_digit(634) == 6
+        assert max_digit(1) == 1
+        assert max_digit(10000) == 1
+        print("Coding complete? Click 'Check' to earn cool rewards!")
+  learner_created: false
+status: Solved
+code: |
+  def max_digit(number: int) -> int:
+      # your code here
+      maximum = 0
+      while number != 0:
+          current = number % 10
+          print(str(number) + " " + str(current))
+          if current > maximum:
+              maximum = current
+          number = number // 10
+      return maximum
+
+
+  if __name__ == '__main__':
+      print("Example:")
+      print(max_digit(0))
+      print(max_digit(52))
+
+      # These "asserts" are used for self-checking and not for an auto-testing
+      assert max_digit(0) == 0
+      assert max_digit(52) == 5
+      assert max_digit(634) == 6
+      assert max_digit(1) == 1
+      assert max_digit(10000) == 1
+      print("Coding complete? Click 'Check' to earn cool rewards!")
+seconds_from_change: 1
